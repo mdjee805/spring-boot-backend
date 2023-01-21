@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+<body>
+  <h2>Heroes protect these people</h2>
+  <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Population</th>
+    </tr>
+    <tr *ngFor="let city of cities">
+      <td>{{city.id}}</td>
+      <td>{{city.name}}</td>
+      <td>{{city.population}}</td>
+    </tr>
+  </table>
+</body>
+<app-messages></app-messages>
